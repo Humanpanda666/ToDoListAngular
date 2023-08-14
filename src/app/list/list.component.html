@@ -1,0 +1,22 @@
+<p>Add new entry</p>
+<div class="container">
+  <mat-form-field class="form-container">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      type="text"
+      #newEntry
+      (keyup.enter)="addItem(newEntry.value)"
+    />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    type="button"
+    color="primary"
+    (click)="addItem(newEntry.value)"
+    [disabled]="newEntry.value === ''"
+  >
+    Add new entry
+  </button>
+</div>
+<app-item></app-item>

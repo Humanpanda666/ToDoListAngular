@@ -1,0 +1,19 @@
+.item-container {
+  display: flex;
+  p {
+    padding-left: 0.75rem;
+  }
+  align-items: end;
+}
+.done {
+  text-decoration: line-through;
+}
+.test {
+  color: black;
+  :hover {
+    color: red;
+  }
+}
+.divider {
+  display: block;
+}
