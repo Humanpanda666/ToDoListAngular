@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   constructor(public listData: ListDataService) {}
 
   ngOnInit() {
-    this.listData.loadItems();
     this.getData();
   }
 

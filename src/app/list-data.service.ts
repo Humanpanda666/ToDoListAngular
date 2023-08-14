@@ -19,24 +19,17 @@ export class ListDataService {
     },
   ];
 
-  loadItems() {
-    this.listData = JSON.parse(localStorage.getItem('tasks') || '{}');
-  }
-
   addItem(taskName: string) {
     this.listData.push({ taskName: taskName, done: false });
     console.log('Taskname ' + taskName);
-    localStorage.setItem('tasks', JSON.stringify(this.listData));
   }
 
   deleteItem(id: any) {
     this.listData.splice(id, 1);
-    localStorage.setItem('tasks', JSON.stringify(this.listData));
   }
 
   markDone(id: any) {
     this.listData[id].done = !this.listData[id].done;
-    localStorage.setItem('tasks', JSON.stringify(this.listData));
   }
 
   countItems(): any {

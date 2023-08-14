@@ -16,7 +16,6 @@ export class ItemComponent implements OnInit {
   items: any;
 
   ngOnInit(): void {
-    this.listData.loadItems();
     this.items = this.listData.listData;
   }
 
