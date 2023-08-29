@@ -26,9 +26,7 @@ export class ListDataService {
   }
 
   addItem(taskName: string) {
-    console.log(this.listData)
     this.listData.push({ taskName: taskName, done: false });
-    console.log('Taskname ' + taskName);
     this.updateLocalStorage()
   }
 
