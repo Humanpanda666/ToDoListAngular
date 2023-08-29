@@ -19,15 +19,13 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.listData.listData;
-    console.log(this.items);
   }
 
-  addItem(value: any) {
+  addItem(value: string) {
     if (value == '') {
       return;
     } else {
       this.listData.addItem(value);
-      console.log('Value: ' + value);
       this.inputName.nativeElement.value = '';
       this.appComponent.getData();
     }

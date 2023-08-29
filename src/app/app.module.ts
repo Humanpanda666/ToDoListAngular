@@ -16,11 +16,9 @@ import { MatBadgeModule } from '@angular/material/badge';
 
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
-import { CounterComponent } from './counter/counter.component';
-import { counterReducer } from './counter/counter.reducer';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent, ListComponent, CounterComponent],
+  declarations: [AppComponent, ItemComponent, ListComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,7 +31,6 @@ import { counterReducer } from './counter/counter.reducer';
     BrowserAnimationsModule,
     MatBadgeModule,
     FormsModule,
-    StoreModule.forRoot({ count: counterReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent],

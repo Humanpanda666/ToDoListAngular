@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ListDataService } from './list-data.service';
 
 @Component({
@@ -7,8 +7,7 @@ import { ListDataService } from './list-data.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'todolist';
-  test: any;
+  title = 'todolist'
 
   count: any;
 
@@ -21,6 +20,5 @@ export class AppComponent implements OnInit {
 
   getData() {
     this.count = this.listData.countItems();
-    console.log(this.count);
   }
 }

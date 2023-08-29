@@ -20,22 +20,29 @@ export class ListDataService {
   ];
 
   loadItems() {
-    this.listData = JSON.parse(localStorage.getItem('tasks') || '{}');
+    if(localStorage.getItem('tasks')?.length !== 0){
+      this.listData = JSON.parse(localStorage.getItem('tasks') || '{}');
+    }
   }
 
   addItem(taskName: string) {
+    console.log(this.listData)
     this.listData.push({ taskName: taskName, done: false });
     console.log('Taskname ' + taskName);
-    localStorage.setItem('tasks', JSON.stringify(this.listData));
+    this.updateLocalStorage()
   }
 
   deleteItem(id: any) {
     this.listData.splice(id, 1);
-    localStorage.setItem('tasks', JSON.stringify(this.listData));
+    this.updateLocalStorage()
   }
 
   markDone(id: any) {
     this.listData[id].done = !this.listData[id].done;
+    this.updateLocalStorage()
+  }
+
+  updateLocalStorage():void {
     localStorage.setItem('tasks', JSON.stringify(this.listData));
   }
 
