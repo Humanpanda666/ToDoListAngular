@@ -1,22 +1,17 @@
-<p>New task:</p>
-<div class="container">
-  <mat-form-field class="form-container">
-    <mat-label>Name</mat-label>
-    <input
-      matInput
-      type="text"
-      #newEntry
-      (keyup.enter)="addItem(newEntry.value)"
-    />
-  </mat-form-field>
-  <button
-    mat-raised-button
-    type="button"
-    color="primary"
-    (click)="addItem(newEntry.value)"
-    [disabled]="newEntry.value === ''"
+<div class="container-test">
+  <input
+    matInput
+    type="text"
+    #newEntry
+    (keyup.enter)="addItem(newEntry.value)"
+  />
+  <button class="keker"
+          type="button"
+          (click)="addItem(newEntry.value)"
+          [disabled]="newEntry.value === ''"
   >
-    Add new entry
+    +
   </button>
 </div>
+<hr class="divider">
 <app-item></app-item>

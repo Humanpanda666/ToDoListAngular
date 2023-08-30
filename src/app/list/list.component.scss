@@ -1,7 +1,62 @@
+@import "/src/app/shared/colors";
 .container {
   display: flex;
 }
 button {
-  margin-top: 0.5rem;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
+.form-container{
+  width: 300px;
+}
+mat-form-field{
+  ::ng-deep{
+    .mat-mdc-text-field-wrapper{
+      background-color: #291748;
+      border-radius: 5px;
+      &hover{
+        border: white 1px solid;
+      }
+    }
+
+  }
+}
+.container-test{
+  background-color: $darkpurple;
+  display: inline-flex;
+  border-radius: 32px;
+  width: 300px;
+  height: 46px;
+  border: 2px solid $purple;
+  justify-content: space-between;
+  align-items: center;
+  & input{
+    padding-left: 16px;
+    background-color: $darkpurple;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 32px;
+    width: 250px;
+  }
+  & button {
+    color: white;
+    background-color: $purple;
+    border: none;
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 30px;
+    &:hover {
+      background-color: $hover;
+      cursor: pointer;
+    }
+  }
+}
+.divider{
+  background-color: $purple;
+  height: 1px;
+  border: none;
+  margin-top: 25px;
+}
+

@@ -1,5 +1,6 @@
 .item-container {
   display: flex;
+  color: white;
   p {
     padding-left: 0.75rem;
   }
@@ -7,12 +8,6 @@
 }
 .done {
   text-decoration: line-through;
-}
-.test {
-  color: black;
-  :hover {
-    color: red;
-  }
 }
 .divider {
   display: block;
