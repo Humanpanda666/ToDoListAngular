@@ -3,7 +3,7 @@ import { ListDataService } from '../list-data.service';
 import { AppComponent } from '../app.component';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-search-bar',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })

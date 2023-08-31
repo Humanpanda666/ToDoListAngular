@@ -1,14 +1,37 @@
+@import "/src/app/shared/colors";
+p{
+  color: white;
+}
 .item-container {
   display: flex;
+  background-color: $light-base;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  align-items: center;
   color: white;
+  justify-content: space-between;
+  box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.29);
+  -webkit-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.29);
+  -moz-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.29);
   p {
     padding-left: 0.75rem;
+    margin: 0;
   }
-  align-items: end;
+  &:hover{
+    background-color: $hover;
+  }
 }
 .done {
   text-decoration: line-through;
 }
 .divider {
   display: block;
+}
+.item-checkbox{
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .mdc-checkbox__background {
+  border-color: $text !important;
 }
