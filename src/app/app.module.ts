@@ -13,6 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
+import { DragDropModule} from "@angular/cdk/drag-drop";
 
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
@@ -31,6 +32,7 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     MatBadgeModule,
     FormsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

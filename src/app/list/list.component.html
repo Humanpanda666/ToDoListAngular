@@ -4,6 +4,8 @@
     type="text"
     #newEntry
     (keyup.enter)="addItem(newEntry.value)"
+    (mouseenter)="test(newEntry.placeholder)"
+    [placeholder]="placeholder"
   />
   <button class="keker"
           type="button"

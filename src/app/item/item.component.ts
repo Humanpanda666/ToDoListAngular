@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { ListDataService } from '../list-data.service';
 import { AppComponent } from '../app.component';
+import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 
 @Component({
   selector: 'app-item',
@@ -20,8 +21,19 @@ export class ItemComponent implements OnInit {
     this.items = this.listData.listData;
   }
 
-  onDelete(id: any) {
-    this.listData.deleteItem(id);
-    this.appComponent.getData();
+  onDelete(id: any, event: any) {
+    const targetElement = event.parentElement.parentElement as HTMLElement;
+    targetElement.classList.add('deleted')
+
+    setTimeout(() => {
+      this.listData.deleteItem(id);
+      this.appComponent.getData();
+    }, 490);
+
+
+
+  }
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.items, event.previousIndex, event.currentIndex);
   }
 }
