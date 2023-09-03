@@ -77,3 +77,13 @@ mat-form-field{
   margin-right: -38px;
 }
 
+.progress-bar {
+  margin-top: 0.75rem;
+  color: white;
+  font-weight: lighter;
+
+  & .mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: rgba(113, 248, 113, 0.42);
+  }
+}
+

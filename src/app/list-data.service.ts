@@ -54,4 +54,19 @@ export class ListDataService {
   countItems(): any {
     return this.listData.length;
   }
+
+  getFinishedItems(){
+    let finished: number = 0
+    for(let i=0; i<this.listData.length;i++){
+      if(this.listData[i].done){
+        finished++
+      }
+    }
+    return finished
+  }
+
+  getPercentageFinished(){
+    let onePercent = this.countItems()/100
+    return this.getFinishedItems()/onePercent
+  }
 }

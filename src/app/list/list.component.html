@@ -15,4 +15,8 @@
     +
   </button>
 </div>
+<div class="progress-bar" *ngIf="listData.listData.length !== 0">
+  <p>Progress:</p>
+  <mat-progress-bar mode="determinate" [value]="listData.getPercentageFinished()"></mat-progress-bar>
+</div>
 <hr class="divider">
