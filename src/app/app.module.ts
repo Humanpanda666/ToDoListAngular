@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
 import { DragDropModule} from "@angular/cdk/drag-drop";
+import {MatMenu, MatMenuModule} from "@angular/material/menu";
 
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
@@ -33,6 +34,7 @@ import { StoreModule } from '@ngrx/store';
     MatBadgeModule,
     FormsModule,
     DragDropModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

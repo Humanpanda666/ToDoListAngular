@@ -35,6 +35,13 @@ export class ListDataService {
     this.updateLocalStorage()
   }
 
+  deleteAllItem(){
+    while (this.listData.length > 0) {
+      this.listData.splice(0, 1); // Remove one element at index 0
+    }
+    this.updateLocalStorage()
+  }
+
   markDone(id: any) {
     this.listData[id].done = !this.listData[id].done;
     this.updateLocalStorage()

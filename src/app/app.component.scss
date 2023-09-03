@@ -42,4 +42,17 @@ h1 {
   align-self: center;
   width: 80%;
 }
+.handle{
+  width: 24px;
+  height: 24px;
+  color:white;
+}
+.boundary{
+  width: 100%;
+  height: 100%;
+}
+.handle-container{
+  display: flex;
+  justify-content: flex-end;
+}
 
