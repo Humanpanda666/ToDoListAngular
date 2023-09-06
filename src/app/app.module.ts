@@ -20,9 +20,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
+import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent, ListComponent,],
+  declarations: [AppComponent, ItemComponent, ListComponent, DialogRemoveComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,

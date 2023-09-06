@@ -3,7 +3,7 @@
     <p class="lighter">To do:</p>
   </div>
   <div *ngFor="let item of items; let id = index" class="container" cdkDrag>
-    <div class="item-container" [class.doneDiv]="item.done">
+    <div class="item-container" [class.done-div]="item.done">
       <div class="item-checkbox">
         <mat-checkbox
           color="primary"

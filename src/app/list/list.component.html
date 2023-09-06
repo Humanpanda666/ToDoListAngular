@@ -4,10 +4,9 @@
     type="text"
     #newEntry
     (keyup.enter)="addItem(newEntry.value)"
-    (mouseenter)="test(newEntry.placeholder)"
-    [placeholder]="placeholder"
+    placeholder="Buy Viky some flowers..."
   />
-  <button class="keker"
+  <button
           type="button"
           (click)="addItem(newEntry.value)"
           [disabled]="newEntry.value === ''"

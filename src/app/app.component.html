@@ -11,17 +11,17 @@
           <span *ngIf="draggingDisabled">Unlock window</span>
           <span *ngIf="!draggingDisabled">Lock window</span>
         </button>
-        <button mat-menu-item (click)="deleteItems()">
+        <button mat-menu-item (click)="openDialog('0ms', '0ms')">
           <mat-icon>delete_sweep</mat-icon>
           <span>Delete all items</span>
         </button>
       </mat-menu>
       <div class="title-icon">
         <h1>{{'chores' | uppercase}}</h1>
-        <mat-icon [matBadge]="count" matBadgeColor="warn" *ngIf="count > 0"
+        <mat-icon [matBadge]="listData.getLength()" matBadgeColor="warn" *ngIf="listData.getLength() > 0"
           >mail_outline</mat-icon
         >
-        <mat-icon matBadgeColor="warn" *ngIf="count == 0">mail_outline</mat-icon>
+        <mat-icon matBadgeColor="warn" *ngIf="listData.getLength() == 0">mail_outline</mat-icon>
       </div>
     </div>
     <app-search-bar class="test"></app-search-bar>

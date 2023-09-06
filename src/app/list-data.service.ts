@@ -19,6 +19,10 @@ export class ListDataService {
     },
   ];
 
+  getLength(){
+    return this.listData.length;
+  }
+
   loadItems() {
     if(localStorage.getItem('tasks')?.length !== 0){
       this.listData = JSON.parse(localStorage.getItem('tasks') || '{}');

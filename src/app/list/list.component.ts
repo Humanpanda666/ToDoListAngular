@@ -30,13 +30,4 @@ export class ListComponent implements OnInit {
       this.appComponent.getData();
     }
   }
-  placeholder = 'Chujar'
-  test(value:any) {
-    console.log(value)
-    for(let i = 0; i < value.length; i++) {
-      console.log(i)
-      this.placeholder = this.placeholder.slice(0, -1)
-      console.log(this.placeholder)
-    }
-  }
 }
