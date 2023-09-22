@@ -1,0 +1,15 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon class="icon-menu">menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="switchDragging()">
+    <mat-icon *ngIf="!listData.draggingDisabled">lock</mat-icon>
+    <mat-icon *ngIf="listData.draggingDisabled">lock_open</mat-icon>
+    <span *ngIf="listData.draggingDisabled">Unlock window</span>
+    <span *ngIf="!listData.draggingDisabled">Lock window</span>
+  </button>
+  <button mat-menu-item (click)="openDialog('0ms', '0ms')">
+    <mat-icon>delete_sweep</mat-icon>
+    <span>Delete all items</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,75 @@
+@import "/src/app/shared/colors";
+
+button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.form-container{
+  width: 300px;
+}
+
+.container{
+  background-color: $darkpurple;
+  display: inline-flex;
+  border-radius: 32px;
+  width: 300px;
+  height: 46px;
+  border: 2px solid $purple;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+  &:focus-within{
+    -webkit-box-shadow:0 0 49px 1px rgba(104,58,183,0.28);
+    -moz-box-shadow: 0 0 49px 1px rgba(104,58,183,0.28);
+    box-shadow: 0 0 49px 1px rgba(104,58,183,0.28);
+    transition: 0.2s;
+  }
+  & input{
+    padding-left: 16px;
+    background-color: $darkpurple;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 32px;
+    width: 250px;
+  }
+  & button {
+    color: white;
+    background-color: $purple;
+    outline: solid 2px $purple;
+    border: none;
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 30px;
+    transition: 0.2s;
+    margin-right: 9px;
+    &:hover {
+      cursor: pointer;
+      background-color: $darkpurple;
+      outline: solid 2px $purple;
+      transition: 0.2s;
+    }
+    &:disabled{
+      background-color: transparent;
+      outline: solid 2px $hover;
+    }
+  }
+}
+.divider{
+  background-color: $purple;
+  height: 1px;
+  border: none;
+  margin: 25px -38px 15px -38px;
+}
+
+.progress-bar {
+  margin-top: 0.75rem;
+  color: white;
+  font-weight: lighter;
+
+  & .mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: rgba(113, 248, 113, 0.42);
+  }
+}
+

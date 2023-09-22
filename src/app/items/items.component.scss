@@ -1,0 +1,10 @@
+@import "/src/app/shared/colors";
+p{
+  color: white;
+}
+.lighter-text{
+  font-weight: lighter;
+}
+::ng-deep .mdc-checkbox__background {
+  border-color: $text !important;
+}

@@ -1,0 +1,14 @@
+ <div class="item-container" [class.task-done-div]="item.done" cdkDrag>
+    <div class="item-content">
+      <mat-checkbox
+        color="primary"
+        class="check"
+        [checked]="item.value.done"
+        (click)="this.listData.markDone(id)"
+      ></mat-checkbox>
+      <p [class.task-done]="item.done">{{ item.value.taskName }}</p>
+    </div>
+    <button mat-icon-button (click)="onDelete(id, $event.target)">
+      <mat-icon>delete_outline</mat-icon>
+    </button>
+  </div>
