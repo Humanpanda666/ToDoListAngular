@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemComponent } from './item/item.component';
+import {ItemsComponent} from './items/items.component';
 import { ListComponent } from './list/list.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,11 +19,11 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 import { FormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
 import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
+import {ItemComponent} from "./item/item.component";
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent, ListComponent, DialogRemoveComponent,],
+  declarations: [AppComponent, ItemComponent, ListComponent, DialogRemoveComponent, ItemComponent, ItemsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,7 +38,7 @@ import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
     FormsModule,
     DragDropModule,
     MatMenuModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
