@@ -19,6 +19,12 @@ export class ListDataService {
     },
   ];
 
+  draggingDisabled:boolean = true;
+
+  toggleDragging(){
+    this.draggingDisabled = !this.draggingDisabled
+  }
+
   getLength(){
     return this.listData.length;
   }

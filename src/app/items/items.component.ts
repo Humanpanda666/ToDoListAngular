@@ -1,6 +1,5 @@
-import { Component, Input, OnInit, OnDestroy, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ListDataService } from '../list-data.service';
-import { AppComponent } from '../app.component';
 import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 
 @Component({

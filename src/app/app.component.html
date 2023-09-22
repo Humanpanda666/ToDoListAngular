@@ -1,21 +1,7 @@
 <div class="boundary">
-  <div class="container" cdkDrag cdkDragBoundary=".boundary" [cdkDragDisabled]="draggingDisabled">
+  <div class="container" cdkDrag cdkDragBoundary=".boundary" [cdkDragDisabled]="listData.draggingDisabled">
     <div class="title">
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon class="icon-menu">menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="switchDragging()">
-          <mat-icon *ngIf="!draggingDisabled">lock</mat-icon>
-          <mat-icon *ngIf="draggingDisabled">lock_open</mat-icon>
-          <span *ngIf="draggingDisabled">Unlock window</span>
-          <span *ngIf="!draggingDisabled">Lock window</span>
-        </button>
-        <button mat-menu-item (click)="openDialog('0ms', '0ms')">
-          <mat-icon>delete_sweep</mat-icon>
-          <span>Delete all items</span>
-        </button>
-      </mat-menu>
+      <app-menu></app-menu>
       <div class="title-icon">
         <h1>{{'chores' | uppercase}}</h1>
         <mat-icon [matBadge]="listData.getLength()" matBadgeColor="warn" *ngIf="listData.getLength() > 0"
@@ -24,7 +10,7 @@
         <mat-icon matBadgeColor="warn" *ngIf="listData.getLength() == 0">mail_outline</mat-icon>
       </div>
     </div>
-    <app-search-bar class="test"></app-search-bar>
+    <app-search-bar class="search-bar"></app-search-bar>
     <app-items class="items"></app-items>
   </div>
 </div>

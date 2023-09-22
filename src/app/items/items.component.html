@@ -1,6 +1,6 @@
 <div cdkDropList (cdkDropListDropped)="drop($event)" class="drop-list">
   <div  *ngIf="items.length > 0">
-    <p class="lighter">To do:</p>
+    <p class="lighter-text">To do:</p>
   </div>
   <app-item *ngFor="let item of items; let id = index" class="container" [item]="item" [id]="id"></app-item>
   <p *ngIf="items == ''">No tasks!</p>

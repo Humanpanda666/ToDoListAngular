@@ -1,14 +1,14 @@
- <div class="item-container" [class.done-div]="item.done" cdkDrag>
-    <div class="item-checkbox">
+ <div class="item-container" [class.task-done-div]="item.done" cdkDrag>
+    <div class="item-content">
       <mat-checkbox
         color="primary"
         class="check"
         [checked]="item.done"
         (click)="this.listData.markDone(id)"
       ></mat-checkbox>
-      <p [class.done]="item.done">{{ item.taskName }}</p>
+      <p [class.task-done]="item.done">{{ item.taskName }}</p>
     </div>
     <button mat-icon-button (click)="onDelete(id, $event.target)">
-      <mat-icon class="test">delete_outline</mat-icon>
+      <mat-icon>delete_outline</mat-icon>
     </button>
   </div>

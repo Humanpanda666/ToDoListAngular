@@ -1,6 +1,5 @@
-import {ChangeDetectorRef, Component, Input} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {ListDataService} from "../list-data.service";
-import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-item',
@@ -14,17 +13,15 @@ export class ItemComponent {
 
   constructor(
     public listData: ListDataService,
-    public appComponent: AppComponent,
-    private cdr: ChangeDetectorRef
   ) {}
 
   onDelete(id: any, event: any) {
     const targetElement = event.parentElement.parentElement as HTMLElement;
     targetElement.classList.add('deleted')
 
+    //Delete item after animation
     setTimeout(() => {
       this.listData.deleteItem(id);
-      this.appComponent.getData();
     }, 490);
   }
 }

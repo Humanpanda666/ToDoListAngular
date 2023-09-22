@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ListDataService } from '../list-data.service';
-import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-search-bar',
@@ -12,7 +11,6 @@ export class ListComponent implements OnInit {
 
   constructor(
     public listData: ListDataService,
-    public appComponent: AppComponent
   ) {}
 
   items: any;
@@ -27,7 +25,6 @@ export class ListComponent implements OnInit {
     } else {
       this.listData.addItem(value);
       this.inputName.nativeElement.value = '';
-      this.appComponent.getData();
     }
   }
 }

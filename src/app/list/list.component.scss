@@ -1,7 +1,5 @@
 @import "/src/app/shared/colors";
-.container {
-  display: flex;
-}
+
 button {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -9,19 +7,8 @@ button {
 .form-container{
   width: 300px;
 }
-mat-form-field{
-  ::ng-deep{
-    .mat-mdc-text-field-wrapper{
-      background-color: #291748;
-      border-radius: 5px;
-      &hover{
-        border: white 1px solid;
-      }
-    }
 
-  }
-}
-.container-test{
+.container{
   background-color: $darkpurple;
   display: inline-flex;
   border-radius: 32px;
@@ -32,9 +19,9 @@ mat-form-field{
   align-items: center;
   transition: 0.2s;
   &:focus-within{
-    -webkit-box-shadow:0px 0px 49px 1px rgba(104,58,183,0.28);
-    -moz-box-shadow: 0px 0px 49px 1px rgba(104,58,183,0.28);
-    box-shadow: 0px 0px 49px 1px rgba(104,58,183,0.28);
+    -webkit-box-shadow:0 0 49px 1px rgba(104,58,183,0.28);
+    -moz-box-shadow: 0 0 49px 1px rgba(104,58,183,0.28);
+    box-shadow: 0 0 49px 1px rgba(104,58,183,0.28);
     transition: 0.2s;
   }
   & input{
@@ -56,6 +43,7 @@ mat-form-field{
     height: 32px;
     font-size: 30px;
     transition: 0.2s;
+    margin-right: 9px;
     &:hover {
       cursor: pointer;
       background-color: $darkpurple;
@@ -72,9 +60,7 @@ mat-form-field{
   background-color: $purple;
   height: 1px;
   border: none;
-  margin-top: 25px;
-  margin-left: -38px;
-  margin-right: -38px;
+  margin: 25px -38px 15px -38px;
 }
 
 .progress-bar {

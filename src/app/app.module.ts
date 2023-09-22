@@ -14,16 +14,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
 import { DragDropModule} from "@angular/cdk/drag-drop";
-import {MatMenu, MatMenuModule} from "@angular/material/menu";
+import { MatMenuModule} from "@angular/material/menu";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
-
 import { FormsModule } from '@angular/forms';
 import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
 import {ItemComponent} from "./item/item.component";
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent, ListComponent, DialogRemoveComponent, ItemComponent, ItemsComponent],
+  declarations: [AppComponent, ItemComponent, ListComponent, DialogRemoveComponent, ItemComponent, ItemsComponent, MenuComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -2,68 +2,9 @@
 p{
   color: white;
 }
-.lighter{
+.lighter-text{
   font-weight: lighter;
 }
-.item-container {
-  display: flex;
-  //background-color: $light-base;
-
-  background: rgba(156, 137, 179, 0.46);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.1px);
-  -webkit-backdrop-filter: blur(9.1px);
-  border: 1px solid rgba(156, 137, 179, 0.92);
-  cursor: move;
-
-
-  //border-radius: 12px;
-  margin-bottom: 12px;
-  align-items: center;
-  color: white;
-  justify-content: space-between;
-
-  p {
-    padding-left: 0.75rem;
-    margin: 0;
-  }
-  &:hover{
-    background-color: $hover;
-  }
-}
-.done {
-  text-decoration: line-through;
-}
-.done-div{
-  background: rgba(113, 248, 113, 0.42);
-}
-.divider {
-  display: block;
-}
-.item-checkbox{
-  display: flex;
-  align-items: center;
-}
-
 ::ng-deep .mdc-checkbox__background {
   border-color: $text !important;
-}
-
-// Deletion
-
-.deleted {
-  position: relative;
-  animation: moveRight 0.5s linear;
-  overflow: hidden;
-}
-@keyframes moveRight {
-  0% {
-    right: 0;
-    opacity: 100%;
-  }
-  100% {
-    right: calc(-100%); /* Move the element completely to the right */
-    opacity: 0%;
-  }
 }
