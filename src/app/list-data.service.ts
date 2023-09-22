@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 
+interface Task {
+  taskName: string,
+  done: boolean
+
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class ListDataService {
-  listData = [
+  listData:Task[] = [
     {
       taskName: 'Clean the dishes',
       done: true,
@@ -30,13 +36,14 @@ export class ListDataService {
   }
 
   loadItems() {
-    if(localStorage.getItem('tasks')?.length !== 0){
-      this.listData = JSON.parse(localStorage.getItem('tasks') || '{}');
+    if(localStorage.getItem('tasks')?.length !== 0 || localStorage.getItem('')){
+      this.listData = JSON.parse(localStorage.getItem('tasks') || '');
     }
   }
 
   addItem(taskName: string) {
-    this.listData.push({ taskName: taskName, done: false });
+    const newTask = {taskName: taskName, done:false}
+    this.listData.push(newTask);
     this.updateLocalStorage()
   }
 

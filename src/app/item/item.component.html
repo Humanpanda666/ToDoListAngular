@@ -3,10 +3,10 @@
       <mat-checkbox
         color="primary"
         class="check"
-        [checked]="item.done"
+        [checked]="item.value.done"
         (click)="this.listData.markDone(id)"
       ></mat-checkbox>
-      <p [class.task-done]="item.done">{{ item.taskName }}</p>
+      <p [class.task-done]="item.done">{{ item.value.taskName }}</p>
     </div>
     <button mat-icon-button (click)="onDelete(id, $event.target)">
       <mat-icon>delete_outline</mat-icon>
