@@ -36,7 +36,7 @@ export class ListDataService {
   }
 
   loadItems() {
-    if(localStorage.getItem('tasks')?.length !== 0 || localStorage.getItem('')){
+    if(localStorage.getItem('tasks') !== null){
       this.listData = JSON.parse(localStorage.getItem('tasks') || '');
     }
   }
